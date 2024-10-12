@@ -1,7 +1,5 @@
 # Setup a Cyber Lab
 
-![[Sans-titre-2023-11-02-1412.png]]
-
 #### Prerequisites
 
 - VMware Workstation Pro installed
@@ -52,14 +50,16 @@ Replace `enp0s3` with the NAT interface and `enp0s8` with the host-only interfac
    - Edit the network configuration file: `sudo nano /etc/netplan/00-installer-config.yaml`
    - Configure it to have a static IP:
 
-```
+```yaml
 	network:
 		ethernets:
 			ens33:
 				addresses: [10.1.1.10/24]
 				gateway4: 10.1.1.1
-				nameservers:
-					addresses: [8.8.8.8, 8.8.4.4]
+                nameservers:
+				    addresses:
+                        - 8.8.8.8
+                        - 8.8.4.4
 		version: 2
 ```
 

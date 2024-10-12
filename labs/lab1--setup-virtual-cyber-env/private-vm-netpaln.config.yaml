@@ -1,0 +1,10 @@
+network:
+  ethernets:
+    ens33:
+      addresses:
+        - 192.168.102.129/24
+      gateway4: 192.168.128
+      nameservers:
+        addresses:
+          - 8.8.8.8
+  version: 2
