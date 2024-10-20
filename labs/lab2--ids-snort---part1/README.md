@@ -17,7 +17,7 @@ Using your package manager install snort v2, for Debian based distributions (eg.
 
 ![fig1](./figures/fig1_snort-version.png)
 
-- Snort configuration is located at `/etc/snort/snort.config`
+- Snort configuration is located at `/etc/snort/snort.conf`
 - Snort can work either online and offline
 - Online => listening to incoming traffic of a net interface
 
@@ -34,7 +34,7 @@ sudo snort -r <pcap_path> -A <out_mode> -i <if> -c <config_path> -l <out_path>
 - Also, we can run snort as service
 
 ```bash
-sudo snort start
+sudo service snort start
 ```
 
 ![fig2](./figures/fig2_snort-service-status.png)
@@ -72,7 +72,7 @@ The -T option is used to verify the configuration file. it should show sucess me
 - Retsrat you snort service (use `status` command to check snort service after restarting)
 
 ```bash
-sudo service restart
+sudo service snort restart
 ```
 
 #### Triggering an Alert for the New Rule
