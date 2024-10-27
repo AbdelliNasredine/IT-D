@@ -46,7 +46,7 @@ msg:"Office 2010";sid:10011)
 
 ```
 alert tcp any any <> any any (pcre:"/5\d{3}(\s|-)?\d{4}(\s|-)?\d{4}(\s|-
-)?\d{4}/"; msg:"MasterCard number detected in clear text";content:"number";nocase sid:9000003;rev:1;)
+)?\d{4}/"; msg:"MasterCard number detected in clear text";content:"number";nocase;sid:9000003;rev:1;)
 
 alert tcp any any <> any any (pcre:"/3\d{3}(\s|-)?\d{6}(\s|-)?\d{5}/"; msg:"American Express number detected in clear text";content:"number";nocase;sid:9000004;rev:1;)
 
